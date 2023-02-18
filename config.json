@@ -1,0 +1,16 @@
+{
+    "matric_num": "A0200908M",
+    "module_name": "Critical Reflection",
+    "sem_num": 2,
+    "ay": "2022/2023",
+    "assignment_name": "USP & Home Faculty Learning",
+    "has_appendix": true,
+    "banned_words": [
+        "as such",
+        "As such",
+        "This",
+        "That",
+        "These",
+        "Those"
+    ]
+}
