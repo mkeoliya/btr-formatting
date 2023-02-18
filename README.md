@@ -13,6 +13,7 @@ We want our essays to get feedback. Let's make that happen.
 1. ??
 1. Enjoy the feedback!
 
+WARNING: Currently, the formatter does not check for free-floating pointer words __within__ sentences. You must check manually for them, because it is extremely hard to detect incorrect usage of these words (free-float intended).  
 
 Here are BTR's feedback diktats:
 
