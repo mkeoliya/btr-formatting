@@ -2,6 +2,8 @@ from docx import Document
 import docx.shared
 import json
 
+from utils import add_page_number
+
 # read config json
 with open('config.json') as f:
     config = json.load(f)
@@ -74,7 +76,17 @@ flat_text = ' '.join(text)
 num_words = len(flat_text.split())
 add_word_count(num_words)
 
-# TODO: Add page numbers
+# Add page number footer
+footer = document.sections[0].footer
+p = footer.paragraphs[0]
+p.alignment = docx.enum.text.WD_ALIGN_PARAGRAPH.RIGHT
+run = footer.paragraphs[0].add_run()
+add_page_number(run)
+
+# set footer style
+style = document.styles['Footer']
+style.font.name = 'Times New Roman'
+style.font.size = docx.shared.Pt(12)
 
 # check for banned words
 if any(word in flat_text for word in banned_words):
